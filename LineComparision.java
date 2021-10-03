@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class LineComparision {
@@ -6,8 +5,10 @@ public class LineComparision {
 	public static void main(String[] args) {
 		
 		Scanner endpoints= new Scanner(System.in); 
+
 		
-		//Taking start and end coordinates of line from user
+		//Taking start and end coordinates of line1 from user
+
 
 		System.out.println("Enter coordinates for Line1 ");
 
@@ -23,6 +24,12 @@ public class LineComparision {
 		System.out.print("Enter y2 ");  
 		double y2= endpoints.nextInt();
 
+
+		//Taking start and end coordinates of line2 from user
+
+		
+		System.out.println();
+
 		System.out.println("Enter coordinates for Line2");
 
  		System.out.print("Enter x3 ");
@@ -37,22 +44,46 @@ public class LineComparision {
  		System.out.print("Enter y4 ");
  		double y4= endpoints.nextInt();
 
-	
+		System.out.println();
+
 		System.out.println("Line1 coordinates are x1="+x1+"; y1="+y1+"; x2="+x2+"; y2="+y2);
 		
-		 System.out.println("Line2 coordinates are x3="+x3+"; y3="+y3+"; x4="+x4+"; y4="+y4);
-		//Calculating length of line
+		System.out.println("Line2 coordinates are x3="+x3+"; y3="+y3+"; x4="+x4+"; y4="+y4);
+		
+
+		//Calculating length of lines
+
 		
 		double length1=Math.sqrt(Math.pow((x2-x1),2) +Math.pow((y2-y1),2));
 		
 		double length2=Math.sqrt(Math.pow((x4-x3),2) +Math.pow((y4-y3),2));
 
-		System.out.println("The length of line is "+length1);
+		System.out.println();
 
-		 System.out.println("The length of line is "+length2);
-	
-	
-	
+		System.out.println("The length of line1 is "+length1);
+
+		System.out.println("The length of line2 is "+length2);
+
+
+		//Using equals method to compare two length
+
+		
+		Double len1=length1;
+		Double len2=length2;
+
+		boolean result=len1.equals(len2);
+
+		System.out.println();
+
+		if(result==true){
+		
+		System.out.println("Length of both lines is same");
+		}
+		
+		else
+		
+		System.out.println("Length of two lines are different");
+
+		}
+
 	}
-
-}
